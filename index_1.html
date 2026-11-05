@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matrix Inverse Explorer</title>
+<meta name="description" content="Find the inverse of any square matrix step by step using determinant, minors, cofactors and adjoint, with exact fractions.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Matrix Inverse Explorer</h1>
+    <p>Find the inverse of a square matrix step by step. Every number is an exact fraction, never a decimal.</p>
+    <span class="formula">A⁻¹ = adj(A) ÷ det(A)</span>
+  </header>
+
+  <nav id="nav" aria-label="Steps"></nav>
+
+  <main id="card">
+    <div id="stage"></div>
+    <div class="bar">
+      <button class="btn ghost" id="back" data-act="prev">← Back</button>
+      <button class="btn" id="next" data-act="nextstep">Start →</button>
+    </div>
+  </main>
+
+  <details>
+    <summary>📖 Little glossary</summary>
+    <dl>
+      <dt>Square matrix</dt><dd>A grid with the same number of rows and columns (2×2, 3×3, ...).</dd>
+      <dt>Determinant, det(A)</dt><dd>One number computed from the matrix. If it is 0, the matrix has no inverse.</dd>
+      <dt>Minor, Mᵢⱼ</dt><dd>Cover row i and column j, then take the determinant of what is left.</dd>
+      <dt>Cofactor, Cᵢⱼ</dt><dd>The minor with a sign: Cᵢⱼ = (−1)<sup>i+j</sup> × Mᵢⱼ.</dd>
+      <dt>Adjoint, adj(A)</dt><dd>The transpose of the cofactor matrix (rows become columns).</dd>
+      <dt>Inverse, A⁻¹</dt><dd>The matrix that undoes A: A × A⁻¹ = I (the identity matrix).</dd>
+      <dt>Singular matrix</dt><dd>A matrix with det(A) = 0. It has no inverse.</dd>
+    </dl>
+  </details>
+
+  <footer>Made for students · exact fraction arithmetic with BigInt · no libraries, no tracking</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
